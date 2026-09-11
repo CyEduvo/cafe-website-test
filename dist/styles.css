@@ -6,14 +6,14 @@
 
 /* ---- Design tokens (change these to re-theme the whole site) -------- */
 :root {
-  --ink:    #2b1d14;   /* dark espresso text          */
-  --muted:  #8a7a6d;   /* soft brown for secondary text */
-  --paper:  #f6efe6;   /* warm cream page background   */
-  --card:   #fffdf9;   /* card background              */
-  --line:   #e6dccf;   /* borders and dividers         */
+  --ink:    #ff6200;   /* dark espresso text          */
+  --muted:  #ff7300;   /* soft brown for secondary text */
+  --paper:  #ff9100;   /* warm cream page background   */
+  --card:   #ffaa00;   /* card background              */
+  --line:   #ff9100;   /* borders and dividers         */
   --brand:  #6f4e37;   /* coffee brown (primary)       */
-  --accent: #c98a3c;   /* caramel (highlights / badges)*/
-  --cream:  #f0d9b5;   /* pale cream (success icon)    */
+  --accent: #ff8c00;   /* caramel (highlights / badges)*/
+  --cream:  #ff9d00;   /* pale cream (success icon)    */
   --shadow: 0 18px 50px rgba(60, 40, 25, .14);
 
   font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
