@@ -2,8 +2,6 @@
    Willow & Bean Café — menu, search/filter/sort, and order logic
    ===================================================================== */
 
-// const { createElement } = require("react");
-
 // If nobody "signed in" on the login page, send them back there.
 if (!sessionStorage.getItem('cafeUser')) location.replace('login.html');
 
@@ -122,21 +120,3 @@ document.querySelector('#logout').onclick = () => {
 renderFilters();
 renderMenu();
 updateCartCount();
-
-let audio = document.createElement('audio')
-    audio.src = "./audios/faaah.mp3"
-    audio.appendChild(document.querySelector("body"))
-async function test() {
-  try {
-      setInterval(() => {
-        
-    audio.play()
-    console.log(1)
-      }, 1200)
-  }
-  catch (err) {
-
-  }
-}
-
-test()
