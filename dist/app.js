@@ -11,7 +11,7 @@ if (!sessionStorage.getItem('cafeUser')) location.replace('login.html');
    Each item is a plain object. Add, edit or remove objects to change
    the menu — every id must be unique. */
 const menu = [
-  { id: 1, name: 'House Espresso',   category: 'Coffee',   price: 8  },
+  { id: 1, name: 'Car',   category: 'Car',   price: 100000,  },
   { id: 2, name: 'Flat White',       category: 'Coffee',   price: 13 },
   { id: 3, name: 'Cappuccino',       category: 'Coffee',   price: 13 },
   { id: 4, name: 'Caramel Latte',    category: 'Coffee',   price: 15 },
