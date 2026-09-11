@@ -7,7 +7,7 @@ if (!sessionStorage.getItem('cafeUser')) location.replace('login.html');
 
 // The menu is repeated here so this page can look up names and prices.
 const menu = [
-  { id: 1, name: 'House Espresso',   price: 8  },
+  { id: 1, name: 'Car',   price: -1  },
   { id: 2, name: 'Flat White',       price: 13 },
   { id: 3, name: 'Cappuccino',       price: 13 },
   { id: 4, name: 'Caramel Latte',    price: 15 },
