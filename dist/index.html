@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Willow &amp; Bean Café</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Sticky top navigation -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">WILLOW<span>&amp;</span>BEAN</a>
+      <div class="nav-links">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="checkout.html" class="cart-link">Order <span class="cart-count" id="cartCount">0</span></a>
+        <button class="btn btn-outline" id="logout">Log out</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero banner -->
+    <section class="hero">
+      <div class="hero-box container">
+        <div class="hero-copy">
+          <span class="eyebrow">Open daily · 7am – 6pm</span>
+          <h1>Coffee worth slowing down for.</h1>
+          <p>Ethically sourced beans, roasted weekly. Order ahead and skip the queue,
+             or just come say hello.</p>
+          <a href="#menu" class="btn btn-light">See the menu ↓</a>
+        </div>
+        <div class="hero-art">
+          <img src="images/hero.jpg" alt="A freshly poured coffee on the café counter">
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu / catalogue -->
+    <section class="catalog" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Today's menu</span>
+            <h2>Freshly made, all day</h2>
+            <p>Filter by category or arrange items by name and price.</p>
+          </div>
+          <div id="resultCount"></div>
+        </div>
+
+        <div class="filters" id="filters"></div>
+
+        <div class="toolbar">
+          <input class="control" id="search" type="search" placeholder="Search the menu…" aria-label="Search the menu">
+          <select class="control" id="sort" aria-label="Sort menu">
+            <option value="featured">Sort: Featured</option>
+            <option value="price-asc">Price: Low to high</option>
+            <option value="price-desc">Price: High to low</option>
+            <option value="name">Name: A–Z</option>
+          </select>
+        </div>
+
+        <div class="product-grid" id="menuGrid"></div>
+      </div>
+    </section>
+
+    <!-- About strip -->
+    <section class="about" id="about">
+      <div class="container about-box">
+        <div>
+          <span class="eyebrow">Our story</span>
+          <h2>A café built around the neighbourhood.</h2>
+          <p>We started with one espresso machine and a simple idea: make the kind of
+             café we wanted to spend our mornings in. Everything on the menu is made
+             fresh, and our beans are roasted in small batches every week.</p>
+        </div>
+        <div class="about-art">
+          <img src="images/about.jpg" alt="Inside the Willow &amp; Bean café">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- "Added to order" toast -->
+  <div class="toast" id="toast">Added to order</div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in — Willow &amp; Bean Café</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="login-page">
+    <!-- Left side: brand story panel -->
+    <section class="login-visual">
+      <a class="brand" href="login.html">WILLOW<span>&amp;</span>BEAN</a>
+      <div>
+        <p class="eyebrow">Slow mornings, good coffee</p>
+        <h1>Your table is ready.</h1>
+        <p>A cosy neighbourhood café serving small-batch coffee, loose-leaf tea and
+           fresh-baked pastries. Sign in to browse the menu and start an order.</p>
+      </div>
+      <p>Student demonstration project · Front-end only</p>
+    </section>
+
+    <!-- Right side: fake login form -->
+    <section class="login-panel">
+      <form class="login-form" id="loginForm">
+        <h2>Welcome back</h2>
+        <p>Sign in to view today's menu.</p>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" type="email" value="guest@willowbean.test" required>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" type="password" value="coffee123" minlength="6" required>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Sign in →</button>
+
+        <div class="demo-note">
+          <strong>Demo login:</strong> This is a fake front-end login. Any valid email
+          and a password of 6 or more characters will work.
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    // Fake login: store the email for this browser tab, then go to the menu.
+    // This is NOT real security — a real site checks credentials on a server.
+    document.querySelector('#loginForm').addEventListener('submit', event => {
+      event.preventDefault();
+      sessionStorage.setItem('cafeUser', document.querySelector('#email').value);
+      location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

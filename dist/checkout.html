@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your order — Willow &amp; Bean Café</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">WILLOW<span>&amp;</span>BEAN</a>
+      <div class="nav-links">
+        <a href="index.html#menu">Continue browsing</a>
+        <a href="checkout.html" class="cart-link">Order <span class="cart-count" id="cartCount">0</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="checkout-layout">
+      <!-- Collection / payment form -->
+      <section>
+        <div class="page-title">
+          <h1>Your order</h1>
+          <p>Complete the form below. No real payment will be processed.</p>
+        </div>
+
+        <form class="checkout-card" id="checkoutForm">
+          <h2>Collection details</h2>
+          <div class="field-row">
+            <div class="field">
+              <label for="firstName">First name</label>
+              <input id="firstName" required>
+            </div>
+            <div class="field">
+              <label for="lastName">Last name</label>
+              <input id="lastName" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input id="phone" inputmode="numeric" required>
+          </div>
+
+          <div class="field">
+            <label for="pickup">Pickup time</label>
+            <select id="pickup" class="control" required>
+              <option value="">Choose a time…</option>
+              <option>As soon as possible</option>
+              <option>In 15 minutes</option>
+              <option>In 30 minutes</option>
+              <option>In 1 hour</option>
+            </select>
+          </div>
+
+          <h2>Payment details</h2>
+          <div class="field">
+            <label for="card">Card number</label>
+            <input id="card" value="4242 4242 4242 4242" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="expiry">Expiry</label>
+              <input id="expiry" placeholder="MM/YY" required>
+            </div>
+            <div class="field">
+              <label for="cvv">CVV</label>
+              <input id="cvv" inputmode="numeric" maxlength="3" required>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Place demo order</button>
+        </form>
+      </section>
+
+      <!-- Live order summary with quantity controls -->
+      <aside class="summary-card">
+        <h2>Order summary</h2>
+        <div class="summary-list" id="summaryList"></div>
+        <div class="summary-total">
+          <span>Total</span>
+          <span id="summaryTotal">RM0.00</span>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Success modal (hidden until the order is placed) -->
+  <div class="modal-backdrop" id="successModal" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+    <div class="modal">
+      <div class="success-icon">✓</div>
+      <span class="eyebrow">Order confirmed</span>
+      <h2 id="successTitle">Thank you!</h2>
+      <p>Your demo order has been placed. A real café would now start preparing it and
+         send a confirmation to your phone.</p>
+      <a class="btn btn-primary" href="index.html" id="doneButton">Back to menu</a>
+    </div>
+  </div>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
