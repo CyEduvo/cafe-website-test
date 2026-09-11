@@ -16,7 +16,7 @@
   --cream:  #ff9d00;   /* pale cream (success icon)    */
   --shadow: 0 18px 50px rgba(60, 40, 25, .14);
 
-  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: cursive;
   color: var(--ink);
   background: var(--paper);
 }
